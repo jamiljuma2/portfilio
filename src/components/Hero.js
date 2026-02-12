@@ -23,7 +23,7 @@ const Hero = () => (
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4, duration: 0.7 }}
     >
-      SOFTWARE DEVELOPER / UI/UX | Building Impactful Solutions
+      FULL-STACK WEB DEVELOPER | Building Impactful Solutions
     </motion.h2>
     <motion.a
       href="#projects"

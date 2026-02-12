@@ -2,7 +2,7 @@ import React from 'react';
 
 const experiences = [
   {
-    role: 'Software Developer',
+  
     company: 'Tech Innovators Inc.',
     period: '2024 – Present',
     achievements: [
@@ -12,7 +12,7 @@ const experiences = [
     ]
   },
   {
-    role: 'Frontend Engineer',
+    
     company: 'Creative Solutions Ltd.',
     period: '2023 – 2025',
     achievements: [

@@ -6,7 +6,7 @@ const projects = [
     title: 'Online Marketplace for Writers and Students',
     image: '/edulinkwriters-screenshot.png', // Place the screenshot in the public folder with this name
     description: 'A platform connecting writers and students for academic and creative projects, featuring secure payments and real-time messaging.',
-    technologies: ['React.js', 'Node.js', 'PostgreSQL', 'REST APIs', 'Supabase'],
+    technologies: ['Next.js', 'Node.js', 'PostgreSQL', 'REST APIs', 'Supabase'],
     challenges: 'Built scalable user authentication, integrated Supabase for real-time data, and optimized for high concurrency.',
     link: 'https://www.edulinkwriters.com'
   },
