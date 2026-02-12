@@ -5,6 +5,7 @@ const skills = [
   { name: 'JavaScript', icon: '🟨', level: 92 },
   { name: 'React.js', icon: '⚛️', level: 90 },
   { name: 'Node.js', icon: '🟩', level: 88 },
+  { name: 'Next.js', icon: '⏭️', level: 87 },
   { name: 'Django', icon: '🌱', level: 85 },
   { name: 'SQL', icon: '🗄️', level: 90 },
   { name: 'PostgreSQL', icon: '🐘', level: 88 },
