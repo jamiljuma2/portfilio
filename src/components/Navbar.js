@@ -9,7 +9,6 @@ const Navbar = () => {
         <ul className="flex space-x-8 text-lg">
           <li><a href="#about" className="hover:text-blue-500 transition-colors">About</a></li>
           <li><a href="#skills" className="hover:text-blue-500 transition-colors">Skills</a></li>
-          <li><a href="#experience" className="hover:text-blue-500 transition-colors">Experience</a></li>
           <li><a href="#projects" className="hover:text-blue-500 transition-colors">Projects</a></li>
           <li><a href="#education" className="hover:text-blue-500 transition-colors">Education</a></li>
           <li><a href="#testimonials" className="hover:text-blue-500 transition-colors">Testimonials</a></li>
