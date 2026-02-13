@@ -60,7 +60,7 @@ const Contact = () => {
             placeholder="Your Name"
             value={form.name}
             onChange={handleChange}
-            className="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="p-3 rounded border border-gray-300 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
           <input
@@ -69,7 +69,7 @@ const Contact = () => {
             placeholder="Your Email"
             value={form.email}
             onChange={handleChange}
-            className="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="p-3 rounded border border-gray-300 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
           <textarea
@@ -77,7 +77,7 @@ const Contact = () => {
             placeholder="Your Message"
             value={form.message}
             onChange={handleChange}
-            className="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="p-3 rounded border border-gray-300 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
             rows={5}
             required
           />
