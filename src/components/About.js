@@ -5,7 +5,7 @@ const About = () => (
     <div className="max-w-4xl mx-auto">
       <h2 className="text-3xl font-bold text-blue-500 mb-6">About Me</h2>
       <p className="text-lg text-gray-100 dark:text-gray-900 mb-4">
-        I am a results-driven SOFTWARE DEVELOPER / UI/UX with a passion for delivering innovative, high-quality solutions. With a proven track record of exceeding expectations, I thrive in dynamic environments and am committed to continuous learning and professional growth.
+        I am a results-driven FULL-STACK WEB DEVELOPER with a passion for delivering innovative, high-quality solutions. With a proven track record of exceeding expectations, I thrive in dynamic environments and am committed to continuous learning and professional growth.
       </p>
       <p className="text-lg text-gray-100 dark:text-gray-900 mb-4">
         My career goal is to leverage my expertise to drive impactful change, collaborate with top-tier teams, and contribute to projects that make a real difference. Key achievements include:
