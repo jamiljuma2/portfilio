@@ -12,7 +12,7 @@ const Navbar = () => {
     { href: '#contact', label: 'Contact' },
   ];
   return (
-    <nav className="fixed w-full z-50 bg-slate-900 dark:bg-slate-100 shadow-lg">
+    <nav className="fixed w-full z-50 bg-slate-900 dark:bg-slate-100 shadow-lg border-b border-blue-500">
       <div className="w-full max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
         <div className="text-2xl font-bold text-blue-500">BARASA JUMA JAMIL</div>
         {/* Desktop menu */}
@@ -30,7 +30,7 @@ const Navbar = () => {
       </div>
       {/* Mobile menu dropdown */}
       {menuOpen && (
-        <ul className="md:hidden flex flex-row space-x-4 bg-slate-900 dark:bg-slate-100 px-6 py-4 text-lg shadow-lg">
+        <ul className="md:hidden flex flex-row space-x-4 bg-slate-900 dark:bg-slate-100 px-6 py-4 text-lg shadow-lg border-t border-blue-500">
           {navLinks.map(link => (
             <li key={link.label}><a href={link.href} className="hover:text-blue-500 transition-colors" onClick={() => setMenuOpen(false)}>{link.label}</a></li>
           ))}
