@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="w-full max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
         <div className="text-2xl font-bold text-blue-500">BARASA JUMA JAMIL</div>
         {/* Desktop menu */}
-        <ul className="hidden md:flex space-x-8 text-lg">
+        <ul className="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0 text-lg">
           {navLinks.map(link => (
             <li key={link.label}><a href={link.href} className="hover:text-blue-500 transition-colors">{link.label}</a></li>
           ))}
