@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="fixed w-full z-50 bg-slate-900 dark:bg-slate-100 shadow-lg">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         <div className="text-2xl font-bold text-blue-500">BARASA JUMA JAMIL</div>
-        <ul className="flex space-x-8 text-lg">
+        <ul className="flex space-x-4 text-base">
           <li><a href="#about" className="hover:text-blue-500 transition-colors">About</a></li>
           <li><a href="#skills" className="hover:text-blue-500 transition-colors">Skills</a></li>
           <li><a href="#projects" className="hover:text-blue-500 transition-colors">Projects</a></li>
