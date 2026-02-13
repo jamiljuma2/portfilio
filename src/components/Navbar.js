@@ -13,7 +13,7 @@ const Navbar = () => {
   ];
   return (
     <nav className="fixed w-full z-50 bg-slate-900 dark:bg-slate-100 shadow-lg">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6">
+      <div className="w-full max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
         <div className="text-2xl font-bold text-blue-500">BARASA JUMA JAMIL</div>
         {/* Desktop menu */}
         <ul className="hidden md:flex space-x-8 text-lg">
