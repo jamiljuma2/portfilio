@@ -20,14 +20,14 @@ const Contact = () => {
     }
     try {
       await emailjs.send(
-        'your_service_id', // Replace with your EmailJS service ID
-        'your_template_id', // Replace with your EmailJS template ID
+        'service_3lrav57', // Your EmailJS service ID
+        'template_7hh6prq', // Your EmailJS template ID
         {
           from_name: form.name,
           from_email: form.email,
           message: form.message,
         },
-        'your_user_id' // Replace with your EmailJS user/public key
+        'bC5gqCwnbDaF5gnRm' // Your EmailJS public key
       );
       setSuccess(true);
       setForm({ name: '', email: '', message: '' });
