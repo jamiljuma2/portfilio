@@ -94,9 +94,15 @@ const Contact = () => {
           </motion.button>
         </motion.form>
         <div className="flex justify-center space-x-6 mt-8">
-          <a href="https://linkedin.com" className="text-blue-500 hover:text-blue-700 text-2xl" aria-label="LinkedIn"><i className="fab fa-linkedin"></i>LinkedIn</a>
-          <a href="https://github.com" className="text-blue-500 hover:text-blue-700 text-2xl" aria-label="GitHub"><i className="fab fa-github"></i>GitHub</a>
-          </div>
+          <a href="https://linkedin.com" className="text-blue-500 hover:text-blue-700 text-lg flex items-center gap-1" aria-label="LinkedIn">
+            <i className="fab fa-linkedin text-xl"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com" className="text-blue-500 hover:text-blue-700 text-lg flex items-center gap-1" aria-label="GitHub">
+            <i className="fab fa-github text-xl"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
       </div>
     </motion.section>
   );
