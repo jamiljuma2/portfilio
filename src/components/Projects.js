@@ -10,6 +10,14 @@ const projects = [
     challenges: 'Built scalable user authentication, integrated Supabase for real-time data, and optimized for high concurrency.',
     link: 'https://www.edulinkwriters.com'
   },
+    {
+      title: 'Financial Dashboard Web Application',
+      image: '/finflow-dashboard-screenshot.png', // Place the screenshot in the public folder with this name
+      description: 'Built a production-level fintech dashboard inspired by platforms like PayPal and Stripe, demonstrating strong frontend engineering, UI/UX design, and scalable architecture skills.',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Zustand', 'Mock API Layer'],
+      challenges: 'Designed a scalable architecture, implemented interactive charts, and managed state with Zustand for a seamless user experience.',
+      link: 'https://finflow-sooty-nine.vercel.app'
+    },
   {
     title: 'Betting Platform Web Application',
     image: '/apex-bet-screenshot.png', // Place the screenshot in the public folder with this name
