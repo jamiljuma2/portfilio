@@ -1,4 +1,4 @@
-# BARASA JUMA JAMIL | SOFTWARE DEVELOPER / UI/UX Portfolio
+# BARASA JUMA JAMIL | FULL-STACK WEB DEVELOPER | Portfolio
 
 This is the professional portfolio website for BARASA JUMA JAMIL, a Software Developer / UI/UX specialist. Built with React.js and TailwindCSS, fully responsive, visually appealing, and designed to impress top-tier employers.
 
