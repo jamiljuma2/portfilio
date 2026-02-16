@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import DarkModeToggle from './components/DarkModeToggle';
 import './App.css';
+import AIChatbot from './components/AIChatbot';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -27,6 +28,7 @@ function App() {
         <Education />
         <Testimonials />
         <Contact />
+        <AIChatbot />
       </div>
     </div>
   );

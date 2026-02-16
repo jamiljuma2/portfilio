@@ -1,0 +1,22 @@
+[
+  {
+    "name": "ApexBet",
+    "description": "Sports betting SaaS with predictions, fixtures, payments",
+    "link": "https://apexbet.example.com"
+  },
+  {
+    "name": "Digital Restaurant",
+    "description": "QR code menu + ordering system",
+    "link": "https://digitalrestaurant.example.com"
+  },
+  {
+    "name": "Finflow Dashboard",
+    "description": "Financial dashboard inspired by PayPal",
+    "link": "https://finflow.example.com"
+  },
+  {
+    "name": "Student Marketplace",
+    "description": "Connect students with assignment writers",
+    "link": "https://studentmarketplace.example.com"
+  }
+]
