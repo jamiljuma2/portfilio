@@ -78,7 +78,36 @@ function getBotReply(message: string): string {
   if (msg.includes('hello') || msg.includes('hi'))
     return "Hello 👋 I'm Jamil’s AI assistant. Ask me about his skills, projects, experience, or background.";
 
-  if (msg.includes('about') || msg.includes('who are you') || msg.includes('background') || msg.includes('bio'))
+  if (msg.includes('skills'))
+    return "Jamil is a Full-Stack Developer specializing in Next.js, TypeScript, Supabase, Node.js, Firebase, system architecture, and scalable fintech platforms.";
+  if (msg.includes('projects'))
+    return (
+      "Here are my main projects:\n\n" +
+      "1. Online Marketplace for Writers and Students:\n" +
+      "A platform connecting writers and students for academic and creative projects, featuring secure payments and real-time messaging.\n" +
+      "Tech Stack: Next.js, Node.js, PostgreSQL, REST APIs, Supabase\n" +
+      "Key Features: Scalable user authentication, real-time data with Supabase, optimized for high concurrency.\n\n" +
+      "2. Financial Dashboard Web Application:\n" +
+      "A production-level fintech dashboard inspired by PayPal and Stripe, with strong frontend engineering, UI/UX design, and scalable architecture.\n" +
+      "Tech Stack: Next.js, TypeScript, Tailwind CSS, Recharts, Zustand, Mock API Layer\n" +
+      "Key Features: Scalable architecture, interactive charts, state management with Zustand.\n\n" +
+      "3. Betting Platform Web Application:\n" +
+      "A robust web app for sports betting with live odds, user management, and transaction tracking.\n" +
+      "Tech Stack: React.js, Node.js, PostgreSQL, REST APIs, Supabase\n" +
+      "Key Features: Secure payment flows, real-time odds updates, scalable backend.\n\n" +
+      "4. Digital Restaurant QR Code System:\n" +
+      "A digital menu and ordering system for restaurants using QR codes, streamlining order management and customer experience.\n" +
+      "Tech Stack: React.js, Node.js, PostgreSQL, REST APIs, Supabase\n" +
+      "Key Features: QR code generation, real-time order updates, mobile responsiveness."
+    );
+  if (
+    msg.includes('about') ||
+    msg.includes('who are you') ||
+    msg.includes('background') ||
+    msg.includes('bio') ||
+    msg.includes('who is barasa juma jamil') ||
+    msg.includes('who is jamil')
+  )
     return (
       "I am a results-driven FULL-STACK WEB DEVELOPER with a passion for delivering innovative, high-quality solutions. With a proven track record of exceeding expectations, I thrive in dynamic environments and am committed to continuous learning and professional growth.\n\n" +
       "My career goal is to leverage my expertise to drive impactful change, collaborate with top-tier teams, and contribute to projects that make a real difference. Key achievements include:\n" +
@@ -86,10 +115,6 @@ function getBotReply(message: string): string {
       "- Increased system efficiency by 35% through process optimization.\n" +
       "- Recognized for outstanding leadership and technical excellence."
     );
-  if (msg.includes('skills'))
-    return "Jamil is a Full-Stack Developer specializing in Next.js, TypeScript, Supabase, Node.js, Firebase, system architecture, and scalable fintech platforms.";
-  if (msg.includes('projects'))
-    return "He built EduLink Writers, financial dashboards, authentication systems, ApexBet, Digital restaurant and modern SaaS applications.";
   if (msg.includes('experience'))
     return (
       "Jamil's Experience:\n\n" +
