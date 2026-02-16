@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MiniChatGPTPortfolio from './components/MiniChatGPTPortfolio';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -27,6 +28,7 @@ function App() {
         <Education />
         <Testimonials />
         <Contact />
+        <MiniChatGPTPortfolio />
       </div>
     </div>
   );
