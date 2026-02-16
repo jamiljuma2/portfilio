@@ -4,18 +4,112 @@ import React, { useState, useRef, useEffect } from 'react';
 // Helper: Rule-based bot reply engine
 function getBotReply(message: string): string {
   const msg = message.toLowerCase();
+  if (
+    msg.includes('digital restaurant') ||
+    msg.includes('qr code system') ||
+    msg.includes('restaurant project') ||
+    (msg.includes('project') && msg.includes('restaurant'))
+  ) {
+    return (
+      "Digital Restaurant QR Code System:\n\n" +
+      "A digital menu and ordering system for restaurants using QR codes, streamlining order management and customer experience.\n\n" +
+      "Tech Stack: React.js, Node.js, PostgreSQL, REST APIs, Supabase\n" +
+      "Key Features:\n" +
+      "- Developed QR code generation\n" +
+      "- Integrated real-time order updates\n" +
+      "- Ensured mobile responsiveness\n"
+    );
+  }
+  if (
+    msg.includes('betting platform') ||
+    msg.includes('sports betting') ||
+    msg.includes('apexbet') ||
+    (msg.includes('project') && msg.includes('betting'))
+  ) {
+    return (
+      "Betting Platform Web Application:\n\n" +
+      "A robust web app for sports betting with live odds, user management, and transaction tracking.\n\n" +
+      "Tech Stack: React.js, Node.js, PostgreSQL, REST APIs, Supabase\n" +
+      "Key Features:\n" +
+      "- Implemented secure payment flows\n" +
+      "- Real-time odds updates\n" +
+      "- Scalable backend architecture\n"
+    );
+  }
+  if (
+    msg.includes('financial dashboard') ||
+    msg.includes('fintech dashboard') ||
+    (msg.includes('project') && msg.includes('dashboard'))
+  ) {
+    return (
+      "Financial Dashboard Web Application:\n\n" +
+      "Built a production-level fintech dashboard inspired by platforms like PayPal and Stripe, demonstrating strong frontend engineering, UI/UX design, and scalable architecture skills.\n\n" +
+      "Tech Stack: Next.js, TypeScript, Tailwind CSS, Recharts, Zustand, Mock API Layer\n" +
+      "Key Features:\n" +
+      "- Designed a scalable architecture\n" +
+      "- Implemented interactive charts\n" +
+      "- Managed state with Zustand for a seamless user experience\n"
+    );
+  }
+  if (
+    msg.includes('online marketplace') ||
+    msg.includes('writers and students') ||
+    msg.includes('edulink writers') ||
+    (msg.includes('project') && msg.includes('marketplace'))
+  ) {
+    return (
+      "Online Marketplace for Writers and Students:\n\n" +
+      "A platform connecting writers and students for academic and creative projects, featuring secure payments and real-time messaging.\n\n" +
+      "Tech Stack: Next.js, Node.js, PostgreSQL, REST APIs, Supabase\n" +
+      "Key Features:\n" +
+      "- Scalable user authentication\n" +
+      "- Real-time data with Supabase\n" +
+      "- Optimized for high concurrency\n"
+    );
+  }
+  if (msg.includes('education') || msg.includes('degree') || msg.includes('university') || msg.includes('school'))
+    return (
+      "Education:\n\n" +
+      "Bachelor of Science in Computer Science\n" +
+      "University of Embu\n" +
+      "- Almost graduating\n" +
+      "- Active member of Tech Club"
+    );
   if (msg.includes('hello') || msg.includes('hi'))
-    return "Hello 👋 I'm Jamil’s AI assistant. Ask me about his skills, projects, or experience.";
+    return "Hello 👋 I'm Jamil’s AI assistant. Ask me about his skills, projects, experience, or background.";
+
+  if (msg.includes('about') || msg.includes('who are you') || msg.includes('background') || msg.includes('bio'))
+    return (
+      "I am a results-driven FULL-STACK WEB DEVELOPER with a passion for delivering innovative, high-quality solutions. With a proven track record of exceeding expectations, I thrive in dynamic environments and am committed to continuous learning and professional growth.\n\n" +
+      "My career goal is to leverage my expertise to drive impactful change, collaborate with top-tier teams, and contribute to projects that make a real difference. Key achievements include:\n" +
+      "- Led a team to deliver a mission-critical project 2 months ahead of schedule.\n" +
+      "- Increased system efficiency by 35% through process optimization.\n" +
+      "- Recognized for outstanding leadership and technical excellence."
+    );
   if (msg.includes('skills'))
     return "Jamil is a Full-Stack Developer specializing in Next.js, TypeScript, Supabase, Node.js, Firebase, system architecture, and scalable fintech platforms.";
   if (msg.includes('projects'))
     return "He built EduLink Writers, financial dashboards, authentication systems, ApexBet, Digital restaurant and modern SaaS applications.";
   if (msg.includes('experience'))
-    return "Jamil focuses on building scalable full-stack applications with secure backend systems and clean UI/UX.";
-  if (msg.includes('contact'))
-    return "You can reach Jamil via LinkedIn or email in the contact section of this website.";
+    return (
+      "Jamil's Experience:\n\n" +
+      "Tech Innovators Inc.:\n" +
+      "- Collaborated with small companies on web and software development projects.\n" +
+      "- Assisted in feature implementation, testing, debugging, and deployment.\n" +
+      "- Worked within team environments using version control and structured workflows.\n\n" +
+      "Creative Solutions Ltd.:\n" +
+      "- Led UI redesign, improving user engagement by 40%.\n" +
+      "- Implemented accessibility best practices across all products.\n" +
+      "- Collaborated with cross-functional teams to deliver projects on time."
+    );
+  if (msg.includes('contact') || msg.includes('github') || msg.includes('linkedin'))
+    return (
+      "You can reach Jamil via LinkedIn or email in the contact section of this website.\n" +
+      "GitHub: https://github.com/jamiljuma2\n" +
+      "LinkedIn: https://www.linkedin.com/in/jamil-juma-5b5606343/"
+    );
   if (msg.includes('cv') || msg.includes('resume'))
-    return "You can download his CV from the Resume section above.";
+    return "You can download his CV from the Resume section down below.";
   return "That’s a great question. Try asking about skills, projects, or experience.";
 }
 

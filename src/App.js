@@ -9,6 +9,7 @@ import Education from './components/Education';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
+import DownloadCV from './components/DownloadCV';
 import DarkModeToggle from './components/DarkModeToggle';
 import './App.css';
 
@@ -27,6 +28,7 @@ function App() {
         <Projects />
         <Education />
         <Testimonials />
+        <DownloadCV />
         <Contact />
         <MiniChatGPTPortfolio />
       </div>
