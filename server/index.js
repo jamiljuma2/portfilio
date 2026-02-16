@@ -24,9 +24,6 @@ app.get('/api/health', (req, res) => {
 });
 
 // Placeholder routes
-app.use('/api/chat', require('./routes/chat'));
-app.use('/api/save-lead', require('./routes/saveLead'));
-app.use('/api/history', require('./routes/history'));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
