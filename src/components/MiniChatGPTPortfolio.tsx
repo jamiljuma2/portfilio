@@ -106,7 +106,10 @@ function getBotReply(message: string): string {
     msg.includes('background') ||
     msg.includes('bio') ||
     msg.includes('who is barasa juma jamil') ||
-    msg.includes('who is jamil')
+    msg.includes("who's barasa juma jamil") ||
+    msg.includes('who is jamil') ||
+    msg.includes("who's jamil") ||
+    /^who('?s| is)\b/.test(msg)
   )
     return (
       "I am a results-driven FULL-STACK WEB DEVELOPER with a passion for delivering innovative, high-quality solutions. With a proven track record of exceeding expectations, I thrive in dynamic environments and am committed to continuous learning and professional growth.\n\n" +
