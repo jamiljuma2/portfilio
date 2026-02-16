@@ -83,11 +83,11 @@ const MiniChatGPTPortfolio: React.FC = () => {
       {/* Floating Chat Button */}
       {!open && (
         <button
-          className="fixed bottom-6 right-6 z-50 bg-blue-500 hover:bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-2xl transition-all duration-300"
+          className="fixed bottom-6 right-6 z-50 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-2xl border-4 border-white/10 hover:scale-105 active:scale-95 transition-all duration-300 group"
           aria-label="Open Chat"
           onClick={() => setOpen(true)}
         >
-          <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" className="drop-shadow-lg group-hover:scale-110 transition-transform">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/>
           </svg>
         </button>
@@ -95,16 +95,16 @@ const MiniChatGPTPortfolio: React.FC = () => {
 
       {/* Chat Panel */}
       {open && (
-        <div className="fixed inset-0 flex items-end justify-end z-50">
-          <div className="w-full max-w-md h-[80vh] m-4 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-2xl flex flex-col border border-blue-500 animate-fade-in">
+        <div className="fixed inset-0 flex items-end justify-end z-50 animate-fade-in">
+          <div className="w-full max-w-md h-[80vh] m-4 rounded-3xl bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 shadow-2xl flex flex-col border border-blue-400/30 backdrop-blur-2xl glassmorphism">
             {/* Header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-slate-700 bg-slate-900 rounded-t-2xl">
-              <div>
-                <span className="font-bold text-lg text-blue-400">Jamil Assistant</span>
-                <span className="ml-2 text-xs text-green-400 bg-green-900 px-2 py-1 rounded">Online</span>
+            <div className="flex items-center justify-between px-7 py-5 border-b border-slate-700/60 bg-gradient-to-r from-slate-900/80 via-slate-800/80 to-slate-900/80 rounded-t-3xl shadow-sm">
+              <div className="flex items-center gap-3">
+                <span className="font-extrabold text-xl text-blue-400 tracking-tight">Jamil Assistant</span>
+                <span className="text-xs text-green-400 bg-green-900/70 px-2 py-1 rounded-full font-semibold shadow">Online</span>
               </div>
               <button
-                className="text-gray-400 hover:text-blue-500 transition-colors"
+                className="text-gray-400 hover:text-blue-400 transition-colors p-2 rounded-full hover:bg-blue-400/10 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 aria-label="Close Chat"
                 onClick={() => setOpen(false)}
               >
@@ -115,15 +115,15 @@ const MiniChatGPTPortfolio: React.FC = () => {
             </div>
 
             {/* Messages Area */}
-            <div className="flex-1 overflow-y-auto px-4 py-3 space-y-2 custom-scrollbar">
+            <div className="flex-1 overflow-y-auto px-5 py-4 space-y-3 custom-scrollbar">
               {messages.length === 0 && (
                 <div className="flex flex-col items-center justify-center h-full text-gray-400">
-                  <div className="mb-4 text-sm">Try a quick prompt:</div>
+                  <div className="mb-4 text-base font-medium">Try a quick prompt:</div>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {promptSuggestions.map(s => (
                       <button
                         key={s}
-                        className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold hover:bg-blue-600 transition"
+                        className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
                         onClick={() => sendMessage(s)}
                       >
                         {s}
@@ -134,26 +134,26 @@ const MiniChatGPTPortfolio: React.FC = () => {
               )}
               {messages.map((msg, idx) => (
                 <div key={idx} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  <div className={`max-w-[75%] px-4 py-2 rounded-2xl shadow-md mb-1 transition-all duration-300
+                  <div className={`max-w-[80%] px-5 py-3 rounded-2xl shadow-lg mb-1 transition-all duration-300 text-base leading-relaxed
                     ${msg.sender === 'user'
-                      ? 'bg-blue-500 text-white rounded-br-sm'
-                      : 'bg-slate-800 text-blue-200 rounded-bl-sm'
-                    }`}
-                    style={{ backdropFilter: 'blur(8px)' }}
+                      ? 'bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 text-white rounded-br-3xl'
+                      : 'bg-white/10 text-blue-100 rounded-bl-3xl border border-blue-400/10'
+                    } hover:scale-[1.02] active:scale-95`}
+                    style={{ backdropFilter: 'blur(10px)' }}
                   >
-                    <div className="font-medium">{msg.text}</div>
-                    <div className="text-xs text-gray-400 mt-1 text-right">{msg.timestamp}</div>
+                    <div className="font-medium whitespace-pre-line">{msg.text}</div>
+                    <div className="text-xs text-gray-400 mt-2 text-right font-mono">{msg.timestamp}</div>
                   </div>
                 </div>
               ))}
               {/* Typing Indicator */}
               {typing && (
                 <div className="flex justify-start">
-                  <div className="bg-slate-800 text-blue-200 px-4 py-2 rounded-2xl shadow-md mb-1 flex items-center gap-2">
+                  <div className="bg-white/10 text-blue-200 px-5 py-3 rounded-2xl shadow-lg mb-1 flex items-center gap-2 border border-blue-400/10">
                     <span className="animate-bounce w-2 h-2 bg-blue-400 rounded-full"></span>
                     <span className="animate-bounce w-2 h-2 bg-blue-300 rounded-full delay-75"></span>
                     <span className="animate-bounce w-2 h-2 bg-blue-200 rounded-full delay-150"></span>
-                    <span className="text-xs text-gray-400 ml-2">Assistant is typing...</span>
+                    <span className="text-xs text-gray-300 ml-2 font-mono">Assistant is typing...</span>
                   </div>
                 </div>
               )}
@@ -161,10 +161,10 @@ const MiniChatGPTPortfolio: React.FC = () => {
             </div>
 
             {/* Input Bar */}
-            <div className="sticky bottom-0 px-4 py-3 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 rounded-b-2xl flex items-center glassmorphism">
+            <div className="sticky bottom-0 px-5 py-4 bg-gradient-to-r from-slate-900/80 via-slate-800/80 to-slate-900/80 rounded-b-3xl flex items-center glassmorphism border-t border-blue-400/10">
               <input
                 type="text"
-                className="flex-1 bg-white/10 backdrop-blur-lg border border-blue-500 rounded-2xl px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 font-medium transition-all"
+                className="flex-1 bg-white/10 backdrop-blur-lg border border-blue-400/30 rounded-2xl px-5 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 font-medium text-base transition-all shadow-inner"
                 placeholder="Type your message..."
                 value={input}
                 onChange={e => setInput(e.target.value)}
@@ -173,12 +173,14 @@ const MiniChatGPTPortfolio: React.FC = () => {
                 autoFocus
               />
               <button
-                className="ml-2 bg-blue-500 hover:bg-blue-600 text-white rounded-full px-4 py-2 font-bold transition"
+                className="ml-3 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white rounded-full p-3 shadow-lg flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                 onClick={() => sendMessage(input)}
                 disabled={loading || !input.trim()}
                 aria-label="Send"
               >
-                Send
+                <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth={2.2} viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </button>
             </div>
           </div>
@@ -189,20 +191,20 @@ const MiniChatGPTPortfolio: React.FC = () => {
       <style>{`
         .custom-scrollbar {
           scrollbar-width: thin;
-          scrollbar-color: #3B82F6 #111827;
+          scrollbar-color: #60a5fa #111827;
         }
         .custom-scrollbar::-webkit-scrollbar {
-          width: 8px;
+          width: 6px;
           background: #111827;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #3B82F6;
+          background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
           border-radius: 4px;
         }
         .glassmorphism {
-          background: rgba(30, 41, 59, 0.7);
-          box-shadow: 0 8px 32px rgba(59,130,246,0.15);
-          backdrop-filter: blur(12px);
+          background: rgba(30, 41, 59, 0.85);
+          box-shadow: 0 8px 32px rgba(59,130,246,0.18);
+          backdrop-filter: blur(16px);
         }
         @keyframes fade-in {
           from { opacity: 0; transform: translateY(40px);}
